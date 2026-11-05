@@ -1,0 +1,18 @@
+# Gradle & Build Artifacts
+.gradle/
+build/
+out/
+
+# JetBrains Sandbox & IDE Caches
+.intellijPlatform/
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Operating System Specific
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log

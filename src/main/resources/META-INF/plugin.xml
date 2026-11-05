@@ -1,0 +1,30 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>com.github.aaalest.fixededitorwidth</id>
+    <name>Fixed Editor Width</name>
+    <vendor url="https://github.com/aaalest">aaalest</vendor>
+
+    <description><![CDATA[
+        <p>Prevents the main editor panel from being squeezed when resizing the IDE window.</p>
+        <br/>
+        <p><b>Features:</b></p>
+        <ul>
+            <li>Hooks into IntelliJ's <code>ThreeComponentsSplitter</code> layout.</li>
+            <li>Directs window width adjustments exclusively into docked tool windows (such as the Run/Terminal panel).</li>
+            <li>Preserves editor text column layout when managing windows on Wayland/Linux tiling setups.</li>
+        </ul>
+    ]]></description>
+
+    <change-notes><![CDATA[
+        <p><b>1.0.0</b></p>
+        <ul>
+            <li>Initial release: Lock editor pane width on horizontal IDE window resizing.</li>
+        </ul>
+    ]]></change-notes>
+
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <postStartupActivity implementation="org.jetbrains.plugins.template.startup.MyProjectActivity" />
+    </extensions>
+</idea-plugin>
